@@ -28,7 +28,7 @@ Cost: TBA
 
 Creates a dataproc cluster to munge a downloaded dump using spark and output batched TTL files.
 
-Time: ~45 mins
+Time: ~2.1 hours
 Cost: TBA
 
 ### 3) Load (TBA)
@@ -37,3 +37,8 @@ Creates a single large VM to run blazegraph on and load the munged TTL files int
 
 Time: ~45 mins
 Cost: TBA
+
+## Todos
+
+- Allow loadData.sh to take files directly in the format `part-00000.gz`
+  - This would avoid an extra rename step in the process
