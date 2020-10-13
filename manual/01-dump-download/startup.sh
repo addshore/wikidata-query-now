@@ -5,7 +5,7 @@ BUCKET=wikidata-collab
 DUMP_SOURCE=https://dumps.wikimedia.your.org
 
 # Download the latest dump and save it to the correct place
-LATEST=$(curl -s $DUMP_SOURCE/wikidatawiki/entities/ | grep latest-all.ttl.bz2 | sed 's|.*\(..\)-\(...\)-\(....\).*|\1-\2-\3|')
+LATEST=$(curl -s $DUMP_SOURCE/wikidatawiki/entities/ | grep latest-all.ttl.bz2 | sed 's|.*\(....\)-\(...\)-\(..\).*|\3-\2-\1|')
 DATE=$(date --date=$LATEST +'%Y%m%d')
 echo $LATEST
 echo $DATE
